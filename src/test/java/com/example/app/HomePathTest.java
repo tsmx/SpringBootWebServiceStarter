@@ -1,6 +1,6 @@
 package com.example.app;
 
-import com.example.dto.SimpleMessageDto;
+import com.example.utils.SimpleMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +28,7 @@ public class HomePathTest {
                         String.class);
         assertThat(response).isNotNull();
         ObjectMapper om = new ObjectMapper();
-        SimpleMessageDto responseMessage = om.readValue(response, SimpleMessageDto.class);
+        SimpleMessage responseMessage = om.readValue(response, SimpleMessage.class);
         assertThat(responseMessage).isNotNull();
         assertThat(responseMessage.getMessage()).isEqualTo("Hello Spring Boot World!");
     }
