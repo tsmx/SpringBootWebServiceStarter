@@ -1,9 +1,10 @@
-package com.example.utils;
+package com.example.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class SimpleMessage {
-    @JsonProperty
+public class SimpleMessageDto {
+
+    @JsonProperty("message")
     private String message;
 
     public String getMessage() {
@@ -14,7 +15,10 @@ public class SimpleMessage {
         this.message = message;
     }
 
-    public SimpleMessage(@JsonProperty("message") String message) {
+    public SimpleMessageDto(String message) {
         this.message = message;
+    }
+
+    public SimpleMessageDto() {
     }
 }

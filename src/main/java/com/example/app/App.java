@@ -1,6 +1,6 @@
 package com.example.app;
 
-import com.example.utils.SimpleMessage;
+import com.example.dto.SimpleMessageDto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class App {
 
     @RequestMapping("/")
-    public ResponseEntity<SimpleMessage> home() {
-        return new ResponseEntity<>(new SimpleMessage("Hello Spring Boot World!"),
+    public ResponseEntity<SimpleMessageDto> home() {
+        return new ResponseEntity<>(new SimpleMessageDto("Hello Spring Boot World!"),
                 HttpStatus.OK);
     }
 
