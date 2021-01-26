@@ -8,10 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example.services")
 public class App {
 
-    public static void main(String... args) {
+    public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }
 }
