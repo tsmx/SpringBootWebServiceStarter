@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.services;
 
 import com.example.dto.PlanetDto;
 import org.slf4j.Logger;
@@ -26,7 +26,11 @@ public class PlanetService {
         this.restTemplate = builder.build();
     }
 
-    @RequestMapping(path = "/planet/{name}", method = RequestMethod.GET)
+    @RequestMapping(
+            path = "/planet/{name}",
+            method = RequestMethod.GET,
+            produces = "application/json"
+    )
     public ResponseEntity<PlanetDto> getPlanetData(@PathVariable String name) {
         log.info("Request for planet: " + name);
         try {
