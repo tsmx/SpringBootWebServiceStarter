@@ -22,7 +22,7 @@ public class HomePathTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void testHomePathRespone() throws Exception {
+    public void testHomePathResponse() throws Exception {
         String response
                 = this.restTemplate.getForObject("http://localhost:" + port + "/",
                         String.class);
